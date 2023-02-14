@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:isa2/shared/app_constant.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../shared/app_button.dart';
@@ -53,7 +54,7 @@ class DeviseScreen extends StatelessWidget
               }
           )
         ],
-        title: APPFont.setText(text: "Vola",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
+        title: APPFont.setText(text: APPConstant.DEVISE,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -69,7 +70,7 @@ class DeviseScreen extends StatelessWidget
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 4.w),
-                child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
+                child: APPFont.setText(text: "${APPConstant.NUMBER_SELECTED} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -78,7 +79,7 @@ class DeviseScreen extends StatelessWidget
                   crossAxisCount: 2,
                   children: [
                     RadioListTile(
-                      title: APPFont.setText(text: "Ariary",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
+                      title: APPFont.setText(text: APPConstant.DEVISE_AR,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 0,
                       groupValue: deviseSelected,
                       onChanged: (value){
@@ -87,7 +88,7 @@ class DeviseScreen extends StatelessWidget
                       },
                     ),
                     RadioListTile(
-                      title: APPFont.setText(text: "Fmg",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
+                      title: APPFont.setText(text: APPConstant.DEVISE_FMG,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 1,
                       groupValue: deviseSelected,
                       onChanged: (value){
@@ -125,7 +126,7 @@ class DeviseScreen extends StatelessWidget
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 4.w),
-                child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
+                child: APPFont.setText(text: "${APPConstant.TRADUCTION} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -134,7 +135,7 @@ class DeviseScreen extends StatelessWidget
                   crossAxisCount: 2,
                   children: [
                     RadioListTile(
-                      title: APPFont.setText(text: "Ariary",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
+                      title: APPFont.setText(text: APPConstant.DEVISE_AR,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 0,
                       groupValue: deviseTraduction,
                       onChanged: (value){
@@ -143,7 +144,7 @@ class DeviseScreen extends StatelessWidget
                       },
                     ),
                     RadioListTile(
-                      title: APPFont.setText(text: "Fmg",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
+                      title: APPFont.setText(text: APPConstant.DEVISE_FMG,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 1,
                       groupValue: deviseTraduction,
                       onChanged: (value){
@@ -172,8 +173,8 @@ class DeviseScreen extends StatelessWidget
                 ),
                 child: APPFont.setText(
                   text: (deviseTraduction == 0)
-                      ? " (${NumberFormatter.formatter(deviseResult)} Ar) :  $textTraduction Ariary"
-                      : " (${NumberFormatter.formatter(deviseResult)} Fmg) :  $textTraduction Fmg",
+                      ? " (${NumberFormatter.formatter(deviseResult)} ${APPConstant.AR}) :  $textTraduction ${APPConstant.DEVISE_AR}"
+                      : " (${NumberFormatter.formatter(deviseResult)} ${APPConstant.DEVISE_FMG}) :  $textTraduction ${APPConstant.DEVISE_FMG}",
                   color: APPTHEMING.grey,
                   fontWeight: FontWeight.bold
                 ),

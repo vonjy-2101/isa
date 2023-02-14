@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:isa2/shared/app_button.dart';
+import 'package:isa2/shared/app_constant.dart';
 import 'package:isa2/shared/number_formatter.dart';
 import 'package:sizer/sizer.dart';
 import '../../shared/app_font.dart';
@@ -35,7 +36,7 @@ class LettersToNumberScreen extends StatelessWidget
                 }
             )
           ],
-          title: APPFont.setText(text: "Toro-làlana",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
+          title: APPFont.setText(text: APPConstant.TRASLATE,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
         ),
         body: Container(
           width: MediaQuery.of(context).size.width,
@@ -56,7 +57,7 @@ class LettersToNumberScreen extends StatelessWidget
                     Container(
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(bottom: 1.h),
-                      child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
+                      child: APPFont.setText(text: "${APPConstant.NUMBER_SELECTED} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
@@ -81,7 +82,7 @@ class LettersToNumberScreen extends StatelessWidget
                     Container(
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(bottom: 1.h),
-                      child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
+                      child: APPFont.setText(text: "${APPConstant.TRADUCTION} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,

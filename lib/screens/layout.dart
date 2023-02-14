@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:isa2/screens/devise/devise.state.dart';
 import 'package:isa2/screens/home/home.state.dart';
 import 'package:isa2/screens/letters_to_number/letters_to_number.state.dart';
+import 'package:isa2/shared/app_constant.dart';
 import 'package:isa2/shared/theme.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
@@ -28,19 +29,19 @@ class LayoutState extends State<Layout>
       return [
         PersistentBottomNavBarItem(
           icon: Icon(Icons.translate),
-          title: ("Handika"),
+          title: (APPConstant.TRASLATE),
           activeColorPrimary: APPTHEMING.yellow,
           inactiveColorPrimary: CupertinoColors.systemGrey,
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.money),
-          title: ("Vola"),
+          title: (APPConstant.DEVISE),
           activeColorPrimary: APPTHEMING.yellow,
           inactiveColorPrimary: CupertinoColors.systemGrey,
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.app_registration),
-          title: ("Toro-làlana"),
+          title: (APPConstant.GUIDE),
           activeColorPrimary: APPTHEMING.yellow,
           inactiveColorPrimary: CupertinoColors.systemGrey,
         )

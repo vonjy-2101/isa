@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:isa2/screens/info.dart';
+import 'package:isa2/shared/app_constant.dart';
 import 'package:isa2/shared/app_font.dart';
 import 'package:sizer/sizer.dart';
 import '../../shared/app_button.dart';
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget
       return Scaffold(
         appBar: AppBar(
           backgroundColor: APPTHEMING.yellow,
-          title: APPFont.setText(text: "Handika",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
+          title: APPFont.setText(text: APPConstant.TRASLATE,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
           actions: [
               IconButton(
                   icon: Icon(Icons.info,color: Colors.black.withOpacity(0.4),size: 20.sp,),
@@ -57,7 +58,7 @@ class HomeScreen extends StatelessWidget
                 Container(
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(left: 4.w,bottom: 1.h),
-                  child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
+                  child: APPFont.setText(text: "${APPConstant.NUMBER_SELECTED} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -84,7 +85,7 @@ class HomeScreen extends StatelessWidget
                 Container(
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(left: 4.w,bottom: 1.h),
-                  child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
+                  child: APPFont.setText(text: "${APPConstant.TRADUCTION} : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
                 ),
                 Container(
                   height: 15.h,
@@ -103,7 +104,7 @@ class HomeScreen extends StatelessWidget
                       ]
                   ),
                   child: APPFont.setText(text: (textTraduction != "") ? "$textTraduction." : "",
-                      fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold)
+                      color: APPTHEMING.grey,fontWeight: FontWeight.bold)
                 ),
 
                 SizedBox(height: 2.h,),
