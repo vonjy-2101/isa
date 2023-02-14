@@ -14,7 +14,10 @@ class Info extends StatelessWidget
     return Scaffold(
       appBar: AppBar(
         backgroundColor: APPTHEMING.yellow,
-        title: APPFont.setText(text: "Mombamomba",fontSize: 12.sp,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
+        iconTheme: IconThemeData(
+          color: Colors.black.withOpacity(0.4),
+        ),
+        title: APPFont.setText(text: "Mombamomba",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

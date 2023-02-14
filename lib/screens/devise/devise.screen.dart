@@ -47,17 +47,13 @@ class DeviseScreen extends StatelessWidget
         backgroundColor: APPTHEMING.yellow,
         actions: [
           IconButton(
-              icon: Icon(Icons.info,color: APPTHEMING.grey,size: 20.sp,),
+              icon: Icon(Icons.info,color: Colors.black.withOpacity(0.4),size: 20.sp,),
               onPressed: (){
                 Navigator.push(contextLayout, CupertinoPageRoute(builder: (context) => Info()));
               }
           )
         ],
-        title: Text(
-          "Vola",
-          style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
-          textAlign: TextAlign.start,
-        ),
+        title: APPFont.setText(text: "Volo",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
