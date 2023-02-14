@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.isa2">
+    package="com.app.isa">
    <application
-        android:label="isa2"
+        android:label="Isa"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

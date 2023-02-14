@@ -1,4 +1,4 @@
-package com.example.isa2
+package com.app.isa
 
 import io.flutter.embedding.android.FlutterActivity
 
