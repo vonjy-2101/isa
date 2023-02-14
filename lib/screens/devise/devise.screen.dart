@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../shared/app_button.dart';
+import '../../shared/app_font.dart';
 import '../../shared/number_formatter.dart';
 import '../../shared/theme.dart';
 import '../info.dart';
@@ -72,11 +73,7 @@ class DeviseScreen extends StatelessWidget
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 4.w),
-                child: Text(
-                  "Tarehimarika voasafidy : ",
-                  style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.start,
-                ),
+                child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -85,10 +82,7 @@ class DeviseScreen extends StatelessWidget
                   crossAxisCount: 2,
                   children: [
                     RadioListTile(
-                      title: Text(
-                          "Ariary",
-                          style: TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                      ),
+                      title: APPFont.setText(text: "Ariary",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 0,
                       groupValue: deviseSelected,
                       onChanged: (value){
@@ -97,10 +91,7 @@ class DeviseScreen extends StatelessWidget
                       },
                     ),
                     RadioListTile(
-                      title: Text(
-                          "Fmg",
-                          style: TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                      ),
+                      title: APPFont.setText(text: "Fmg",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 1,
                       groupValue: deviseSelected,
                       onChanged: (value){
@@ -127,10 +118,9 @@ class DeviseScreen extends StatelessWidget
                       )
                     ]
                 ),
-                child: Text(
-                  (textSelected != "") ? NumberFormatter.formatter(int.parse(textSelected)) : "0",
-                  style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.blue,fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.end,
+                child: APPFont.setText(
+                  text: (textSelected != "") ? NumberFormatter.formatter(int.parse(textSelected)) : "0",
+                  color: APPTHEMING.blue,fontWeight: FontWeight.bold,textAlign: TextAlign.end
                 ),
               ),
 
@@ -139,11 +129,7 @@ class DeviseScreen extends StatelessWidget
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 4.w),
-                child: Text(
-                  "Dikan-teny : ",
-                  style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.start,
-                ),
+                child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -152,10 +138,7 @@ class DeviseScreen extends StatelessWidget
                   crossAxisCount: 2,
                   children: [
                     RadioListTile(
-                      title: Text(
-                        "Ariary",
-                        style: TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                      ),
+                      title: APPFont.setText(text: "Ariary",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 0,
                       groupValue: deviseTraduction,
                       onChanged: (value){
@@ -164,10 +147,7 @@ class DeviseScreen extends StatelessWidget
                       },
                     ),
                     RadioListTile(
-                      title: Text(
-                        "Fmg",
-                        style: TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                      ),
+                      title: APPFont.setText(text: "Fmg",color: APPTHEMING.grey,fontWeight: FontWeight.bold),
                       value: 1,
                       groupValue: deviseTraduction,
                       onChanged: (value){
@@ -194,16 +174,12 @@ class DeviseScreen extends StatelessWidget
                       )
                     ]
                 ),
-                child: Text(
-                    (deviseTraduction == 0)
-                        ? " (${NumberFormatter.formatter(deviseResult)} Ar) :  $textTraduction Ariary"
-                        : " (${NumberFormatter.formatter(deviseResult)} Fmg) :  $textTraduction Fmg",
-                    style: TextStyle(
-                      fontFamily: 'MyriadRoman',
-                      fontSize: 12.sp,
-                      color:  Colors.black.withOpacity(0.4),
-                      fontWeight:  FontWeight.w900,
-                    )
+                child: APPFont.setText(
+                  text: (deviseTraduction == 0)
+                      ? " (${NumberFormatter.formatter(deviseResult)} Ar) :  $textTraduction Ariary"
+                      : " (${NumberFormatter.formatter(deviseResult)} Fmg) :  $textTraduction Fmg",
+                  color: APPTHEMING.grey,
+                  fontWeight: FontWeight.bold
                 ),
               ),
 

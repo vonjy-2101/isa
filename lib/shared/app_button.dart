@@ -36,7 +36,7 @@ class AppButton{
                 title,
                 style: TextStyle(
                   fontFamily: 'MyriadRoman',
-                  fontSize: 12.sp,
+                  fontSize: 11.sp,
                   color:  Colors.black.withOpacity(0.4),
                   fontWeight:  FontWeight.w900,
                 ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:isa2/screens/info.dart';
+import 'package:isa2/shared/app_font.dart';
 import 'package:sizer/sizer.dart';
 import '../../shared/app_button.dart';
 import '../../shared/number_formatter.dart';
@@ -60,11 +61,7 @@ class HomeScreen extends StatelessWidget
                 Container(
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(left: 4.w,bottom: 1.h),
-                  child: Text(
-                    "Tarehimarika voasafidy : ",
-                    style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.start,
-                  ),
+                  child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -82,11 +79,8 @@ class HomeScreen extends StatelessWidget
                         )
                       ]
                   ),
-                  child: Text(
-                    (textSelected != "") ? NumberFormatter.formatter(int.parse(textSelected)) : "0",
-                    style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.blue,fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.end,
-                  ),
+                  child: APPFont.setText(text: (textSelected != "") ? NumberFormatter.formatter(int.parse(textSelected)) : "0",
+                         fontSize: 12.sp,color: APPTHEMING.blue,fontWeight: FontWeight.bold,textAlign: TextAlign.end)
                 ),
 
                 /** Translation component **/
@@ -94,11 +88,7 @@ class HomeScreen extends StatelessWidget
                 Container(
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(left: 4.w,bottom: 1.h),
-                  child: Text(
-                    "Dikan-teny : ",
-                    style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.start,
-                  ),
+                  child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start)
                 ),
                 Container(
                   height: 15.h,
@@ -116,15 +106,8 @@ class HomeScreen extends StatelessWidget
                         )
                       ]
                   ),
-                  child: Text(
-                    (textTraduction != "") ? "$textTraduction." : "",
-                      style: TextStyle(
-                        fontFamily: 'MyriadRoman',
-                        fontSize: 12.sp,
-                        color:  Colors.black.withOpacity(0.4),
-                        fontWeight:  FontWeight.w900,
-                      )
-                  ),
+                  child: APPFont.setText(text: (textTraduction != "") ? "$textTraduction." : "",
+                      fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold)
                 ),
 
                 SizedBox(height: 2.h,),

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../shared/app_font.dart';
 import '../shared/theme.dart';
 
 class Info extends StatelessWidget
@@ -13,11 +14,7 @@ class Info extends StatelessWidget
     return Scaffold(
       appBar: AppBar(
         backgroundColor: APPTHEMING.yellow,
-        title: Text(
-          "Mombamomba",
-          style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
-          textAlign: TextAlign.start,
-        ),
+        title: APPFont.setText(text: "Mombamomba",fontSize: 12.sp,color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -51,36 +48,21 @@ class Info extends StatelessWidget
                   children: [
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Text("Mpamorona",
-                        style : TextStyle(
-                            fontFamily: 'MyriadRoman',
-                            fontSize: 11.sp,
-                            color: Colors.black.withOpacity(0.4),
-                            height: 0.13.h,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
+                      child: APPFont.setText(text: "Mpamorona",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
                     ),
-                    Divider(color: Colors.grey,),
+                    const Divider(color: Colors.grey,),
                     Container(
                       height: 30,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             left: 10,
                             child: Icon(Icons.account_circle_sharp,color: Colors.purple,),
                           ),
                           Positioned(
                             top: 5,
                             left: 50,
-                            child: Text("Vonjy Ralijaona",
-                              style : TextStyle(
-                                  fontFamily: 'MyriadRoman',
-                                  fontSize: 11.sp,
-                                  color: Colors.black.withOpacity(0.4),
-                                  height: 0.13.h
-                              ),
-                            ),
+                            child: APPFont.setText(text: "Vonjy Ralijaona",color: Colors.black.withOpacity(0.4),)
                           )
                         ],
                       ),
@@ -89,21 +71,14 @@ class Info extends StatelessWidget
                       height: 30,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             left: 10,
                             child: Icon(Icons.call,color: Colors.green),
                           ),
                           Positioned(
                             top: 5,
                             left: 50,
-                            child: Text("034 16 851 01",
-                              style : TextStyle(
-                                  fontFamily: 'MyriadRoman',
-                                  fontSize: 11.sp,
-                                  color: Colors.black.withOpacity(0.4),
-                                  height: 0.13.h
-                              ),
-                            ),
+                            child: APPFont.setText(text: "034 16 851 01",color: Colors.black.withOpacity(0.4),)
                           )
                         ],
                       ),
@@ -112,21 +87,14 @@ class Info extends StatelessWidget
                       height: 30,
                       child: Stack(
                         children: [
-                          Positioned(
+                          const Positioned(
                             left: 10,
                             child: Icon(Icons.mail,color: Colors.redAccent,),
                           ),
                           Positioned(
                             top: 5,
                             left: 50,
-                            child: Text("ralvonjy@gmail.com",
-                              style : TextStyle(
-                                  fontFamily: 'MyriadRoman',
-                                  fontSize: 11.sp,
-                                  color: Colors.black.withOpacity(0.4),
-                                  height: 0.13.h
-                              ),
-                            ),
+                            child: APPFont.setText(text: "ralvonjy@gmail.com",color: Colors.black.withOpacity(0.4),)
                           )
                         ],
                       ),
@@ -142,14 +110,7 @@ class Info extends StatelessWidget
                           Positioned(
                             top: 5,
                             left: 50,
-                            child: Text("Vonjy Ralijaona",
-                              style : TextStyle(
-                                  fontFamily: 'MyriadRoman',
-                                  fontSize: 11.sp,
-                                  color: Colors.black.withOpacity(0.4),
-                                  height: 0.13.h
-                              ),
-                            ),
+                            child: APPFont.setText(text: "Vonjy Ralijaona",color: Colors.black.withOpacity(0.4),)
                           )
                         ],
                       ),
@@ -182,31 +143,14 @@ class Info extends StatelessWidget
                     Row(
                       children: [
                         Flag.fromCode(FlagsCode.MG,height: 2.h,width: 10.w),
-                        Text("Mombamomba",
-                          style : TextStyle(
-                              fontFamily: 'MyriadRoman',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black.withOpacity(0.4),
-                              height: 0.13.h
-                          ),
-                          textAlign: TextAlign.start,
-                        )
+                        APPFont.setText(text: "Mombamomba",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
                       ],
                     ),
                     Divider(color: Colors.grey,),
                     SizedBox(height: 1.h,),
-                    Text("Ny \"Application ISA\" dia \"application\" iray hafahana mamantatra sy mamolavola ireo tarehimarika.\n "
+                    APPFont.setText(text: "Ny \"Application ISA\" dia \"application\" iray hafahana mamantatra sy mamolavola ireo tarehimarika.\n "
                         "Afaka fantarina ato ny fomba fanoratra sy dika an-tsoratr'ireo tarehimarika izay tianao ho fantarina.\n "
-                        "Mazotoa mampiasa ary tompoko.",
-                      style : TextStyle(
-                          fontFamily: 'MyriadRoman',
-                          fontSize: 11.sp,
-                          color: Colors.black.withOpacity(0.4),
-                          height: 0.13.h
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                        "Mazotoa mampiasa ary tompoko.",color: Colors.black.withOpacity(0.4)),
                   ],
                 ),
               ),
@@ -235,30 +179,14 @@ class Info extends StatelessWidget
                     Row(
                       children: [
                         Flag.fromCode(FlagsCode.FR,height: 2.h,width: 10.w),
-                        Text("À propos",
-                          style : TextStyle(
-                              fontFamily: 'MyriadRoman',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black.withOpacity(0.4),
-                              height: 0.13.h
-                          ),
-                          textAlign: TextAlign.start,
-                        )
+                        APPFont.setText(text: "À propos",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold)
                       ],
                     ),
-                    Divider(color: Colors.grey,),
+                    const Divider(color: Colors.grey,),
                     SizedBox(height: 1.h,),
-                    Text("L'Application ISA est une application qui permet de traduire les chiffres en langue malgache.\n "
+                    APPFont.setText(text: "L'Application ISA est une application qui permet de traduire les chiffres en langue malgache.\n "
                         "A partir de cette application, vous pouvez connaitre la signification des chiffres que vous voulez traduire en malgache en langue.\n ",
-                      style : TextStyle(
-                          fontFamily: 'MyriadRoman',
-                          fontSize: 11.sp,
-                          color: Colors.black.withOpacity(0.4),
-                          height: 0.13.h
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                        color: Colors.black.withOpacity(0.4)),
                   ],
                 ),
               ),

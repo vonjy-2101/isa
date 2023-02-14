@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:isa2/shared/app_button.dart';
 import 'package:isa2/shared/number_formatter.dart';
 import 'package:sizer/sizer.dart';
+import '../../shared/app_font.dart';
 import '../../shared/theme.dart';
 import '../info.dart';
 
@@ -59,11 +60,7 @@ class LettersToNumberScreen extends StatelessWidget
                     Container(
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(bottom: 1.h),
-                      child: Text(
-                        "Tarehimarika voasafidy : ",
-                        style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.start,
-                      ),
+                      child: APPFont.setText(text: "Tarehimarika voasafidy : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
@@ -80,11 +77,7 @@ class LettersToNumberScreen extends StatelessWidget
                             )
                           ]
                       ),
-                      child: Text(
-                        NumberFormatter.formatter(numberSelected),
-                        style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.blue,fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.end,
-                      ),
+                      child: APPFont.setText(text: NumberFormatter.formatter(numberSelected),color: APPTHEMING.blue,fontWeight: FontWeight.bold,textAlign: TextAlign.end),
                     ),
                     SizedBox(height: 2.h,),
 
@@ -92,11 +85,7 @@ class LettersToNumberScreen extends StatelessWidget
                     Container(
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(bottom: 1.h),
-                      child: Text(
-                        "Dikan-teny : ",
-                        style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.grey,fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.start,
-                      ),
+                      child: APPFont.setText(text: "Dikan-teny : ",color: APPTHEMING.grey,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
@@ -113,11 +102,7 @@ class LettersToNumberScreen extends StatelessWidget
                             )
                           ]
                       ),
-                      child: Text(
-                        numberToText,
-                        style : TextStyle(fontFamily: 'MyriadRoman',fontSize: 12.sp,color: APPTHEMING.blue,fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.start,
-                      ),
+                      child: APPFont.setText(text: numberToText,color: APPTHEMING.blue,fontWeight: FontWeight.bold,textAlign: TextAlign.start),
                     )
                   ],
                 ),
