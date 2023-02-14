@@ -1,6 +1,7 @@
 import 'package:flag/flag.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:isa2/shared/app_constant.dart';
 import 'package:sizer/sizer.dart';
 
 import '../shared/app_font.dart';
@@ -193,6 +194,11 @@ class Info extends StatelessWidget
                   ],
                 ),
               ),
+
+              // VERSION APP
+              SizedBox(height: 4.h,),
+              APPFont.setText(text: "Version ${APPConstant.VERSION}"),
+              SizedBox(height: 2.h,)
 
             ],
           ),
