@@ -189,7 +189,7 @@ class Info extends StatelessWidget
                     const Divider(color: Colors.grey,),
                     SizedBox(height: 1.h,),
                     APPFont.setText(text: "L'Application ISA est une application qui permet de traduire les chiffres en langue malgache.\n "
-                        "A partir de cette application, vous pouvez connaitre la signification des chiffres que vous voulez traduire en malgache en langue.\n ",
+                        "A partir de cette application, vous pouvez connaître la signification des chiffres que vous voulez traduire en langue malgache.\n ",
                         color: Colors.black.withOpacity(0.4)),
                   ],
                 ),
