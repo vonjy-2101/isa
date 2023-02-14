@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
         builder: (context, orientation, deviceType) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: SplashScreen(),
         )
     );

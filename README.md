@@ -3,7 +3,7 @@
 
 "Isa" is a number translation app
 
-## Getting Started
+## Description
 This project is a starting point for a Flutter application.
 
 
