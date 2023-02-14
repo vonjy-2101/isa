@@ -1,5 +1,5 @@
 # isa
-![alt text](https://github.com/vonjy-2101/isa/blob/main/images/isa.png?raw=true)
+![alt text](https://github.com/vonjy-2101/isa/blob/main/images/isa.png?raw=true | width=100)
 "Isa" is a number translation app
 
 ## Getting Started
