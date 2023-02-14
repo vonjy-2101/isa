@@ -53,7 +53,7 @@ class DeviseScreen extends StatelessWidget
               }
           )
         ],
-        title: APPFont.setText(text: "Volo",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
+        title: APPFont.setText(text: "Vola",color: Colors.black.withOpacity(0.4),fontWeight: FontWeight.bold),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
