@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.isa">
+    package="com.orgapp.isa">
    <application
         android:label="Isa"
         android:name="${applicationName}"
