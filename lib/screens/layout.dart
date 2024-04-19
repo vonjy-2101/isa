@@ -74,7 +74,7 @@ class LayoutState extends State<Layout>
             screenTransitionAnimation: const ScreenTransitionAnimation(
               animateTabTransition: true,
               curve: Curves.ease,
-              duration: Duration(milliseconds: 200),
+              duration: Duration(milliseconds: 400),
             ),
         );
     }
